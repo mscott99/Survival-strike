@@ -63,7 +63,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         posY = angle;
     }
 
+<<<<<<< HEAD
 
+=======
+    private static Random random;
+>>>>>>> 367fd83b610d624a639b1d18075e843b4e979b2c
 
 
     static float squareWidth ;
@@ -84,7 +88,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         squareWidth = 0.3f;
         spacing = 0.05f;
         numSquares = 30;
+<<<<<<< HEAD
         being = new ArrayList<>(numBeings);
+=======
+        being = new ArrayList(numBeings);
+>>>>>>> 367fd83b610d624a639b1d18075e843b4e979b2c
 
         int row;
         int column;
@@ -118,7 +126,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
 
+<<<<<<< HEAD
 
+=======
+        random = new Random();
+>>>>>>> 367fd83b610d624a639b1d18075e843b4e979b2c
 
         being.ensureCapacity(numBeings);
 System.out.println("hello there");
