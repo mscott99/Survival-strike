@@ -23,10 +23,6 @@ public class GestureListener implements GestureDetector.OnGestureListener, Scale
     float previousY = NULL;
     float SCROLL_CONSTANT = 0.006f;
 
-<<<<<<< HEAD
-    //will be used to find proportionnal coordinates to pick a being in 3-d through inverted matrix
-=======
->>>>>>> 367fd83b610d624a639b1d18075e843b4e979b2c
     final private float screenWidth;
     final private float screenHeight;
 

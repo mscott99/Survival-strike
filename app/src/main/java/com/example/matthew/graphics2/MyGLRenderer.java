@@ -18,7 +18,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
 
     static Square[][] squares;
-
+private static int currentCount = 0;
     static int myProgram;
     private static final float[] mMVPMatrix = new float[16];
     private static final float[] mProjectionMatrix = new float[16];
@@ -63,11 +63,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         posY = angle;
     }
 
-<<<<<<< HEAD
 
-=======
     private static Random random;
->>>>>>> 367fd83b610d624a639b1d18075e843b4e979b2c
 
 
     static float squareWidth ;
@@ -88,11 +85,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         squareWidth = 0.3f;
         spacing = 0.05f;
         numSquares = 30;
-<<<<<<< HEAD
         being = new ArrayList<>(numBeings);
-=======
         being = new ArrayList(numBeings);
->>>>>>> 367fd83b610d624a639b1d18075e843b4e979b2c
 
         int row;
         int column;
@@ -126,17 +120,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
 
-<<<<<<< HEAD
 
-=======
         random = new Random();
->>>>>>> 367fd83b610d624a639b1d18075e843b4e979b2c
 
         being.ensureCapacity(numBeings);
 System.out.println("hello there");
 
-        being.add(new Being());
-        being.add(new Being());
+        being.add(new Being(this.giveNum()));
+        being.add(new Being(this.giveNum()));
         being.get(0).occupy(20, 20);
         being.get(1).occupy(20,21);
 
@@ -213,10 +204,12 @@ System.out.println("hello there");
             }
         }
     }
-
+public static int giveNum(){
+    return ++currentCount;
+}
     private void generateMultipleBeings() {
         for (int x = 0; x < numBeings; x++) {
-            being.add(new Being());
+            being.add(new Being(giveNum()));
             int columns = x % numSquares;
             being.get(x).occupy(x, columns);
         }
